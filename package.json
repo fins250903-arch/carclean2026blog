@@ -1,0 +1,8 @@
+{
+  "name": "carclean2026blog",
+  "private": true,
+  "scripts": {
+    "build": "cd \"Use blog template\" && npm install && npm run build",
+    "vercel-build": "cd \"Use blog template\" && npm install && npm run build"
+  }
+}
