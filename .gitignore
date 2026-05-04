@@ -1,0 +1,11 @@
+# generated output
+output/
+WordPress.2026-05-03.xml
+uploads.zip
+
+# Astro project dependencies and build artifacts
+Use blog template/node_modules/
+Use blog template/dist/
+Use blog template/.cache/
+Use blog template/.DS_Store
+Use blog template/.env
