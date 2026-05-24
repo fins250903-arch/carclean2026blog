@@ -8,6 +8,11 @@ content:
     type: collection
     path: src/content/blog
     subfolders: true
+    exclude:
+      - "**/images/"
+      - "**/*.jpg"
+      - "**/*.png"
+      - "**/*.webp"
     format: frontmatter
     filename: "{slug}/index"
     fields:
