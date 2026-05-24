@@ -7,6 +7,7 @@ content:
     label: ブログ記事 (Blog Posts)
     type: collection
     path: src/content/blog
+    subfolders: true
     format: frontmatter
     filename: "{slug}/index"
     fields:
