@@ -1,0 +1,28 @@
+media:
+  input: public/posts
+  output: /posts
+
+content:
+  - name: blog
+    label: ブログ記事 (Blog Posts)
+    type: collection
+    path: src/content/blog
+    format: frontmatter
+    filename: "{slug}/index"
+    fields:
+      - name: title
+        label: タイトル (Title)
+        type: string
+      - name: date
+        label: 日付 (Date)
+        type: datetime
+      - name: categories
+        label: カテゴリー (Categories)
+        type: string
+        list: true
+      - name: coverImage
+        label: サムネイル画像 (Cover Image)
+        type: image
+      - name: body
+        label: 本文 (Content)
+        type: rich-text
