@@ -14,7 +14,7 @@ content:
       - "**/*.png"
       - "**/*.webp"
     format: frontmatter
-    filename: "{slug}/index"
+    filename: "{year}/{month}/{slug}/index.md"
     fields:
       - name: title
         label: タイトル (Title)
