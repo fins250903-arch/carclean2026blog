@@ -1,0 +1,21 @@
+// extract.js の例 (Node.jsで実行)
+const fs = require('fs');
+const path = require('path');
+
+// ブログが入っているフォルダのパス（環境に合わせて書き換えてください）
+const blogDir = path.join(__dirname, 'src/content/blog');
+const files = fs.readdirSync(blogDir).filter(f => f.endsWith('.md') || f.endsWith('.mdx'));
+
+let outputText = '';
+
+files.forEach(file => {
+  const content = fs.readFileSync(path.join(blogDir, file), 'utf-8');
+  // 冒頭の400文字だけを切り取る（地域名は大概最初にあるため）
+  const shortContent = content.slice(0, 400).replace(/\n/g, ' '); 
+  
+  outputText += `ID: ${file}\n内容: ${shortContent}\n---\n`;
+});
+
+// AIにコピペ用のファイルを出力
+fs.writeFileSync('for_ai_input.txt', outputText);
+console.log('出力完了！for_ai_input.txt の中身をAIに貼り付けてください。');

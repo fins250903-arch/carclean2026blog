@@ -2,13 +2,16 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
+import markdoc from '@astrojs/markdoc';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://carinteriorcleaning.jp',
 	output: 'static',
-	integrations: [mdx(), sitemap()],
+	integrations: [react(), markdoc(), mdx(), sitemap()],
+
 	fonts: [
 		{
 			provider: fontProviders.local(),
