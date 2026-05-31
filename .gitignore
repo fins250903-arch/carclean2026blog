@@ -25,3 +25,7 @@ gi-service-account-key.json
 
 # jetbrains setting folder
 .idea/
+
+# Windows
+desktop.ini
+Thumbs.db

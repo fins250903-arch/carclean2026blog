@@ -1,0 +1,42 @@
+# After a post is saved in Decap CMS, this syncs blog files to the production repo
+# so https://carinteriorcleaning.jp/blog/ rebuilds automatically on Vercel.
+name: Sync blog to production site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/blog/**'
+      - 'public/posts/**'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout blog repo
+        uses: actions/checkout@v4
+
+      - name: Checkout production repo
+        uses: actions/checkout@v4
+        with:
+          repository: fins250903-arch/carclean0511
+          token: ${{ secrets.BLOG_SYNC_TOKEN }}
+          path: production
+
+      - name: Copy blog content and images
+        run: |
+          rsync -av --delete ./src/content/blog/ ./production/src/content/blog/
+          rsync -av ./public/posts/ ./production/public/posts/
+
+      - name: Push to production
+        working-directory: production
+        run: |
+          git config user.name "blog-sync-bot"
+          git config user.email "blog-sync@users.noreply.github.com"
+          git add src/content/blog public/posts
+          if git diff --staged --quiet; then
+            echo "No changes to publish"
+            exit 0
+          fi
+          git commit -m "sync: blog posts from carclean2026blog"
+          git push

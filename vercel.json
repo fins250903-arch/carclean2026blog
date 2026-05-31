@@ -1,0 +1,16 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "carclean2026blog.vercel.app" }],
+      "destination": "https://carinteriorcleaning.jp/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:path*",
+      "has": [{ "type": "host", "value": "carclean2026blog.vercel.app" }],
+      "destination": "https://carinteriorcleaning.jp/blog/:path*",
+      "permanent": true
+    }
+  ]
+}

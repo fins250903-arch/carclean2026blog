@@ -1,29 +1,9 @@
+# DEPRECATED: Use Decap CMS instead → https://carclean2026blog.vercel.app/admin/
+# Pages CMS cannot provide SEO title counter, safe slug generation, or thumbnail auto-fill.
+# See docs/BLOG_EDITOR.md
+
 media:
   input: public/posts
   output: /posts
 
-content:
-  - name: blog
-    label: ブログ記事 (Blog Posts)
-    type: collection
-    path: src/content/blog
-    subfolders: true
-    format: frontmatter
-    filename: "{year}/{month}/{slug}/index.md"
-    fields:
-      - name: title
-        label: タイトル (Title)
-        type: string
-      - name: date
-        label: 日付 (Date)
-        type: datetime
-      - name: categories
-        label: カテゴリー (Categories)
-        type: string
-        list: true
-      - name: coverImage
-        label: サムネイル画像 (Cover Image)
-        type: image
-      - name: body
-        label: 本文 (Content)
-        type: rich-text
+content: []

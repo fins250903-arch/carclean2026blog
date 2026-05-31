@@ -1,0 +1,96 @@
+# Decap CMS (WordPress-like editor) — https://carclean2026blog.vercel.app/admin/
+backend:
+  name: github
+  repo: fins250903-arch/carclean2026blog
+  branch: main
+  base_url: https://carclean2026blog.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: public/posts
+public_folder: /posts
+
+locale: ja
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: '-'
+
+collections:
+  - name: blog
+    label: ブログ記事
+    label_singular: ブログ記事
+    folder: src/content/blog
+    path: '{{year}}/{{month}}/{{year}}-{{month}}-{{day}}-{{fields.shortSlug}}'
+    slug: '{{year}}-{{month}}-{{day}}-{{fields.shortSlug}}'
+    file: index
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    sortable_fields: ['date', 'title']
+    media_folder: 'public/posts/{{year}}/{{month}}/{{slug}}/images'
+    public_folder: '/posts/{{year}}/{{month}}/{{slug}}/images'
+    view_filters:
+      - label: 埼玉
+        field: categories
+        pattern: saitama
+      - label: 大阪
+        field: categories
+        pattern: osaka
+    fields:
+      - label: 公開日
+        name: date
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        default: '{{now}}'
+        required: true
+
+      - label: タイトル（SEO）
+        name: title
+        widget: seoTitle
+        required: true
+        hint: '検索結果向けは32文字以内が目安です。カウンターが残り文字数を表示します。'
+
+      - label: URL用スラッグ（英字のみ入力）
+        name: shortSlug
+        widget: dateSlug
+        required: true
+        hint: '例: saitama4tontruck → 保存時に 2026-05-31-saitama4tontruck 形式のURLになります'
+
+      - label: カテゴリー
+        name: categories
+        widget: select
+        multiple: true
+        min: 1
+        options:
+          - { label: '施工事例', value: jisseki }
+          - { label: '愛知県', value: aichi }
+          - { label: '沖縄県', value: okinawa }
+          - { label: '福岡県', value: fukuoka }
+          - { label: '兵庫県', value: hyogo }
+          - { label: '茨城県', value: ibaraki }
+          - { label: '千葉県', value: chiba }
+          - { label: '埼玉県', value: saitama }
+          - { label: '神奈川県', value: kanagawa }
+          - { label: '滋賀県', value: shiga }
+          - { label: '宮城県', value: miyagi }
+          - { label: '栃木県', value: tochigi }
+          - { label: '京都府', value: kyoto }
+          - { label: '東京都', value: tokyo }
+          - { label: '大阪府', value: osaka }
+          - { label: '静岡県', value: shizuoka }
+          - { label: '福井県', value: fukui }
+
+      - label: サムネイル画像
+        name: coverImage
+        widget: image
+        required: false
+        hint: '未設定の場合、本文の1枚目の画像を自動でサムネイルにします'
+
+      - label: 本文
+        name: body
+        widget: markdown
+        required: true
+        hint: '画像はドラッグ＆ドロップまたは貼り付けで挿入できます'

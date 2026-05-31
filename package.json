@@ -10,7 +10,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "index": "node scripts/indexing-api.js"
+    "index": "node scripts/indexing-api.js",
+    "sync:main": "node scripts/sync-blog-to-main-site.mjs",
+    "cms:proxy": "decap-server"
   },
   "dependencies": {
     "@astrojs/markdoc": "^1.0.5",

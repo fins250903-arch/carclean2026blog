@@ -1,3 +1,12 @@
+# carclean2026blog
+
+ブログ記事の編集は **Decap CMS**（WordPress 風 UI）を使用します。
+
+- 編集URL: https://carclean2026blog.vercel.app/admin/
+- 手順・初回設定: [docs/BLOG_EDITOR.md](docs/BLOG_EDITOR.md)
+
+---
+
 # Astro Starter Kit: Blog
 
 ```sh
