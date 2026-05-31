@@ -47,16 +47,16 @@ collections:
 
       - label: タイトル（SEO）
         name: title
-        widget: seoTitle
+        widget: string
         required: true
-        hint: '検索結果向けは32文字以内が目安です。カウンターが残り文字数を表示します。'
+        hint: '検索結果向けは32文字以内が目安（入力欄の下に残り文字数を表示します）'
 
-      - label: URL用スラッグ（英字のみ入力）
+      - label: URL用スラッグ（英字のみ）
         name: shortSlug
-        widget: dateSlug
+        widget: string
         required: true
-        pattern: ['^[a-z0-9-]+$', '英数字とハイフンのみ（例: trucksaitama）']
-        hint: '例: trucksaitama → 保存時に 2026-05-31-trucksaitama 形式のURLになります'
+        pattern: ['^[a-z0-9-]+$', '英数字とハイフンのみ。例: trucksaitama']
+        hint: '半角英数字とハイフンのみ。日付は自動で付きます（例: 2026-05-31-trucksaitama）'
 
       - label: カテゴリー
         name: categories
@@ -94,4 +94,4 @@ collections:
         name: body
         widget: markdown
         required: true
-        hint: '画像は保存後に編集画面から追加すると確実です（初回保存はテキストのみ推奨）'
+        hint: '初回はテキストだけで保存 → 編集画面で画像を追加すると確実です'
