@@ -10,7 +10,7 @@
 
   function injectStyles() {
     const css = `
-      .seo-title-input, .date-slug-input { width: 100%; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; }
+      .seo-title-input, .date-slug-input { width: 100%; padding: 8px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
       .seo-title-counter { margin: 6px 0 0; font-size: 13px; }
       .seo-title-ok { color: #15803d; }
       .seo-title-warn { color: #b45309; }
@@ -25,7 +25,9 @@
 
   injectStyles();
 
-  document.addEventListener('decap-cms-init', function () {
+  function registerListeners() {
+    if (!window.CMS) return;
+
     CMS.registerEventListener({
       name: 'preSave',
       handler: function ({ entry }) {
@@ -37,5 +39,8 @@
         return data.set('coverImage', first);
       },
     });
-  });
+  }
+
+  document.addEventListener('decap-cms-init', registerListeners);
+  registerListeners();
 })();

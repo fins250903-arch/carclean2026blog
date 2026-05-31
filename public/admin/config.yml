@@ -1,4 +1,4 @@
-# Decap CMS (WordPress-like editor) — https://carclean2026blog.vercel.app/admin/
+# Decap CMS — https://carclean2026blog.vercel.app/admin/
 backend:
   name: github
   repo: fins250903-arch/carclean2026blog
@@ -21,16 +21,14 @@ collections:
     label: ブログ記事
     label_singular: ブログ記事
     folder: src/content/blog
-    path: '{{year}}/{{month}}/{{year}}-{{month}}-{{day}}-{{fields.shortSlug}}'
-    slug: '{{year}}-{{month}}-{{day}}-{{fields.shortSlug}}'
-    file: index
+    path: '{{year}}/{{month}}/{{slug}}/index'
+    slug: '{{year}}-{{month}}-{{day}}-{{shortSlug}}'
+    identifier_field: shortSlug
     extension: md
     format: frontmatter
     create: true
     delete: true
     sortable_fields: ['date', 'title']
-    media_folder: 'public/posts/{{year}}/{{month}}/{{slug}}/images'
-    public_folder: '/posts/{{year}}/{{month}}/{{slug}}/images'
     view_filters:
       - label: 埼玉
         field: categories
@@ -57,7 +55,8 @@ collections:
         name: shortSlug
         widget: dateSlug
         required: true
-        hint: '例: saitama4tontruck → 保存時に 2026-05-31-saitama4tontruck 形式のURLになります'
+        pattern: ['^[a-z0-9-]+$', '英数字とハイフンのみ（例: trucksaitama）']
+        hint: '例: trucksaitama → 保存時に 2026-05-31-trucksaitama 形式のURLになります'
 
       - label: カテゴリー
         name: categories
@@ -87,10 +86,12 @@ collections:
         name: coverImage
         widget: image
         required: false
+        media_folder: 'public/posts/{{year}}/{{month}}/{{slug}}/images'
+        public_folder: '/posts/{{year}}/{{month}}/{{slug}}/images'
         hint: '未設定の場合、本文の1枚目の画像を自動でサムネイルにします'
 
       - label: 本文
         name: body
         widget: markdown
         required: true
-        hint: '画像はドラッグ＆ドロップまたは貼り付けで挿入できます'
+        hint: '画像は保存後に編集画面から追加すると確実です（初回保存はテキストのみ推奨）'

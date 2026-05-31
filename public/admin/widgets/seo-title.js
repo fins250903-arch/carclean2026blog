@@ -5,7 +5,8 @@
     return Array.from(text || '').length;
   }
 
-  document.addEventListener('decap-cms-init', function () {
+  function registerSeoTitleWidget() {
+    if (!window.CMS) return;
     const h = CMS.h;
 
     const SeoTitleControl = function (props) {
@@ -37,5 +38,8 @@
     };
 
     CMS.registerWidget('seoTitle', SeoTitleControl);
-  });
+  }
+
+  document.addEventListener('decap-cms-init', registerSeoTitleWidget);
+  registerSeoTitleWidget();
 })();

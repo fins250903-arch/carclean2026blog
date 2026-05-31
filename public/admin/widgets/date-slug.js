@@ -27,7 +27,14 @@
     return String(raw).slice(0, 10);
   }
 
-  document.addEventListener('decap-cms-init', function () {
+  function shortSlugFromEntrySlug(entrySlug) {
+    if (!entrySlug) return '';
+    const match = String(entrySlug).match(/^\d{4}-\d{2}-\d{2}-(.+)$/);
+    return match ? sanitizeSlug(match[1]) : sanitizeSlug(entrySlug);
+  }
+
+  function registerDateSlugWidget() {
+    if (!window.CMS) return;
     const h = CMS.h;
 
     const DateSlugControl = function (props) {
@@ -42,7 +49,7 @@
           type: 'text',
           className: 'date-slug-input',
           value: short,
-          placeholder: 'saitama4tontruck',
+          placeholder: 'trucksaitama',
           onChange: function (e) {
             props.onChange(sanitizeSlug(e.target.value));
           },
@@ -51,17 +58,44 @@
           'p',
           { className: 'date-slug-preview' },
           fullSlug
-            ? 'URL: https://carinteriorcleaning.jp/blog/' + prefix + '/' + fullSlug + '/'
+            ? 'URL: https://carinteriorcleaning.jp/blog/' +
+              prefix.slice(0, 4) +
+              '/' +
+              prefix.slice(5, 7) +
+              '/' +
+              fullSlug +
+              '/'
             : '公開日と英字スラッグを入力するとURLが表示されます',
         ),
         h(
           'p',
           { className: 'date-slug-hint' },
-          '英数字とハイフンのみ（例: saitama4tontruck）。日付は自動で先頭に付きます。',
+          '英数字とハイフンのみ（例: trucksaitama）。日付は自動で先頭に付きます。',
         ),
       );
     };
 
     CMS.registerWidget('dateSlug', DateSlugControl);
+  }
+
+  document.addEventListener('decap-cms-init', registerDateSlugWidget);
+  registerDateSlugWidget();
+
+  document.addEventListener('decap-cms-init', function () {
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: function ({ entry }) {
+        if (entry.get('collection') !== 'blog') return;
+        const data = entry.get('data');
+        let short = data.get('shortSlug');
+        if (!short) {
+          short = shortSlugFromEntrySlug(entry.get('slug'));
+          if (short) data.set('shortSlug', short);
+        }
+        if (!data.get('shortSlug')) {
+          throw new Error('URL用スラッグ（英字）を入力してください。例: trucksaitama');
+        }
+      },
+    });
   });
 })();
