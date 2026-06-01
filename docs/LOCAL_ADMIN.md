@@ -10,7 +10,8 @@ npm install
 npm run dev
 ```
 
-ブラウザで開く: **http://localhost:4321/admin/**
+ブラウザで開く: **http://localhost:4321/admin/index.html**  
+（`/admin/` だけだと 404 になる場合があるため、上記 URL を使ってください）
 
 1. GitHub でログイン（OAuth は本番 URL 経由のため、初回は本番と同じ認証フロー）
 2. 記事を作成 → Publish
