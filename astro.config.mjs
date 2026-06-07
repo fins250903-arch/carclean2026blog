@@ -10,10 +10,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://carinteriorcleaning.jp',
 	output: 'static',
-	redirects: {
-		'/admin': '/admin/index.html',
-		'/admin/': '/admin/index.html',
-	},
 	integrations: [react(), markdoc(), mdx(), sitemap()],
 
 	fonts: [
