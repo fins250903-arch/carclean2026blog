@@ -8,11 +8,12 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'] & {
 	heroImage?: string | null;
 	ogImage?: string | null;
+	pubDate?: Date;
 };
 
-const { title, description, date, updatedDate, heroImage, ogImage, seo, ogp } = Astro.props;
-const displayDate = date;
-const showDates = displayDate instanceof Date && !Number.isNaN(displayDate.getTime());
+const { title, description, date, pubDate, updatedDate, heroImage, ogImage, seo, ogp } =
+	Astro.props;
+const displayDate = date ?? pubDate;
 ---
 
 <html lang="ja">
@@ -23,8 +24,8 @@ const showDates = displayDate instanceof Date && !Number.isNaN(displayDate.getTi
 			image={ogImage ?? heroImage ?? undefined}
 			seo={seo}
 			ogp={ogp}
-			publishedTime={date}
-			modifiedTime={updatedDate ?? date}
+			publishedTime={displayDate}
+			modifiedTime={updatedDate ?? displayDate}
 		/>
 		<style>
 			main {
@@ -76,18 +77,16 @@ const showDates = displayDate instanceof Date && !Number.isNaN(displayDate.getTi
 				</div>
 				<div class="prose">
 					<div class="title">
-						{showDates && (
-							<div class="date">
-								<FormattedDate date={displayDate} />
-								{
-									updatedDate && (
-										<div class="last-updated-on">
-											Last updated on <FormattedDate date={updatedDate} />
-										</div>
-									)
-								}
-							</div>
-						)}
+						<div class="date">
+							{displayDate && <FormattedDate date={displayDate} />}
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+						</div>
 						<h1>{title}</h1>
 						<hr />
 					</div>
