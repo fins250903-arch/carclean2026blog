@@ -12,6 +12,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 
 const { title, description, date, updatedDate, heroImage, ogImage, seo, ogp } = Astro.props;
 const displayDate = date;
+const showDates = displayDate instanceof Date && !Number.isNaN(displayDate.getTime());
 ---
 
 <html lang="ja">
@@ -75,16 +76,18 @@ const displayDate = date;
 				</div>
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={displayDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
+						{showDates && (
+							<div class="date">
+								<FormattedDate date={displayDate} />
+								{
+									updatedDate && (
+										<div class="last-updated-on">
+											Last updated on <FormattedDate date={updatedDate} />
+										</div>
+									)
+								}
+							</div>
+						)}
 						<h1>{title}</h1>
 						<hr />
 					</div>
