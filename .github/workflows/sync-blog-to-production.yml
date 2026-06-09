@@ -1,5 +1,8 @@
 # After a post is saved in Decap CMS, this syncs blog files to the production repo
 # so https://carinteriorcleaning.jp/blog/ rebuilds automatically on Vercel.
+#
+# Required secret (Repository → Settings → Secrets and variables → Actions):
+#   BLOG_SYNC_TOKEN = Personal Access Token with "repo" scope (write access to carclean0511)
 name: Sync blog to production site
 
 on:
@@ -13,6 +16,15 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Verify BLOG_SYNC_TOKEN is configured
+        env:
+          TOKEN: ${{ secrets.BLOG_SYNC_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error title=Missing secret::BLOG_SYNC_TOKEN が未設定です。リポジトリ Settings → Secrets and variables → Actions で追加してください（PAT・repo 権限）。"
+            exit 1
+          fi
+
       - name: Checkout blog repo
         uses: actions/checkout@v4
 
@@ -30,13 +42,16 @@ jobs:
 
       - name: Push to production
         working-directory: production
+        env:
+          GITHUB_TOKEN: ${{ secrets.BLOG_SYNC_TOKEN }}
         run: |
           git config user.name "blog-sync-bot"
           git config user.email "blog-sync@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/fins250903-arch/carclean0511.git"
           git add src/content/blog public/posts
           if git diff --staged --quiet; then
             echo "No changes to publish"
             exit 0
           fi
           git commit -m "sync: blog posts from carclean2026blog"
-          git push
+          git push origin HEAD:main
