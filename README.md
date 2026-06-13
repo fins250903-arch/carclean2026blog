@@ -1,72 +1,21 @@
-# carclean2026blog
+# carclean2026blog — ARCHIVED
 
-ブログ記事の編集は **Decap CMS**（WordPress 風 UI）を使用します。
+**このリポジトリは carclean0511 へ統合済みです。新規記事の作成・更新は行わないでください。**
 
-- 編集URL: https://carclean2026blog.vercel.app/admin/
-- 手順・初回設定: [docs/BLOG_EDITOR.md](docs/BLOG_EDITOR.md)
+| 用途 | 新しい場所 |
+|------|------------|
+| ブログ管理（Decap CMS） | https://carinteriorcleaning.jp/admin/ |
+| 本番リポジトリ | https://github.com/fins250903-arch/carclean0511 |
+| 運用手順 | [carclean0511/docs/BLOG_EDITOR.md](https://github.com/fins250903-arch/carclean0511/blob/main/docs/BLOG_EDITOR.md) |
+
+`sync-blog-to-production.yml` は削除済み（二重 commit 防止）。
 
 ---
 
-# Astro Starter Kit: Blog
+# Astro Starter Kit: Blog (legacy)
 
 ```sh
 npm create astro@latest -- --template blog
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Legacy blog template — see carclean0511 for active development.
