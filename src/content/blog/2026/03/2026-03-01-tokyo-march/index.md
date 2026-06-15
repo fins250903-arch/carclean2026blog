@@ -1,9 +1,16 @@
 ---
-title: "【東京都武蔵野市】日産・マーチ、吉祥寺の喧騒とこぼれたラテ"
-date: 2026-03-01
-categories: 
-  - "toukyou"
-coverImage: "日産・マーチmae.jpg"
+date: 2026-06-15
+title: 【東京都武蔵野市】日産・マーチ、吉祥寺の喧騒とこぼれたラテ
+shortSlug: tokyo-march
+categories:
+  - jisseki
+  - tokyo
+coverImage: 日産・マーチmae.jpg
+seo:
+  meta_description: カップホルダーから溢れたカフェラテが助手席を汚してしまいました。
+  noindex: false
+ogp:
+  og_type: article
 ---
 
 武蔵野市、特に吉祥寺周辺の朝は忙しない。仕事に向かう途中、カップホルダーから溢れたカフェラテが助手席を汚してしまいました。
