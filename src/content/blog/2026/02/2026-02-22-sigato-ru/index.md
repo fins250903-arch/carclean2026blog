@@ -1,10 +1,16 @@
 ---
-title: "【大津市】ダイハツ トールの泥水と汗のニオイをスッキリ！車内クリーニング事例"
-date: 2026-02-22
-categories: 
-  - "jisseki"
-  - "siga"
-coverImage: "ダイハツ-トール-e1771744165949.jpg"
+date: 2026-06-15
+title: 【大津市】ダイハツ トールの泥水と汗のニオイをスッキリ！車内クリーニング事例
+shortSlug: sigato-ru
+categories:
+  - jisseki
+  - shiga
+coverImage: ダイハツ-トール-e1771744165949.jpg
+seo:
+  meta_description: 濡れたままの衣服や遊び道具を積んだことで発生した、シートの生乾き臭と泥汚れのクリーニング事例
+  noindex: false
+ogp:
+  og_type: article
 ---
 
 琵琶湖でのキャンプや湖水浴など、アウトドアレジャーを日常的に楽しむ環境が身近にある大津市。濡れたままの衣服や遊び道具を積んだことで発生した、シートの生乾き臭と泥汚れのクリーニング事例です。
