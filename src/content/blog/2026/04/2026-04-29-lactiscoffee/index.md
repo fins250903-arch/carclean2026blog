@@ -7,6 +7,12 @@ categories:
   - aichi
   - tokublo
 coverImage: 300x300.jpg
+seo:
+  meta_description: 車内に持ち込んで一息ついた瞬間に、手が滑って助手席へバシャリ。想像するだけで、頭が真っ白になる瞬間です。
+  noindex: false
+ogp:
+  og_image: kohikobosi.jpg
+  og_type: article
 ---
 クルマの街、豊田。\
 \
