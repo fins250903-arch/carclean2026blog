@@ -1,10 +1,18 @@
 ---
-title: "【堺市】日産 ノートの辛い悩み…子供の車酔い（嘔吐）を徹底洗浄！消臭施工の事例"
 date: 2026-02-22
-categories: 
-  - "jisseki"
-  - "oosaka"
-coverImage: "日産-ノート21.jpg"
+title: 【堺市】日産 ノートの辛い悩み…子供の車酔い（嘔吐）を徹底洗浄！消臭施工の事例
+shortSlug: sakaiouto
+categories:
+  - jisseki
+  - osaka
+coverImage: 日産-ノート21.jpg
+seo:
+  meta_description: |+
+    お子様がうっかり車酔いしてしまったシートの嘔吐跡と酸っぱいニオイの除去を行いました。
+
+  noindex: false
+ogp:
+  og_type: article
 ---
 
 週末は郊外の大型公園やレジャー施設へ車でお出かけするご家庭が多い堺市エリア。ストップ＆ゴーの多い市街地走行で、お子様がうっかり車酔いしてしまったシートの嘔吐跡と酸っぱいニオイの除去を行いました。
