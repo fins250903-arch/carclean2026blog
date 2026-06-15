@@ -1,11 +1,19 @@
 ---
-title: "【世田谷区】トヨタ シエンタの子供の車酔い嘔吐ニオイを解決！"
 date: 2026-04-30
-categories: 
-  - "jisseki"
-  - "toukyou"
-  - "seisou"
-coverImage: "トヨタ・シエンタ3retume-e1777541560824.jpg"
+title: 【世田谷区】トヨタ シエンタの子供の車酔い嘔吐ニオイを解決！
+shortSlug: stgayasienta
+categories:
+  - jisseki
+  - tokyo
+coverImage: line_oa_chat_260323_145111.jpg
+seo:
+  meta_description: |-
+    お子様の車酔いによる嘔吐のニオイだけはどうしても我慢できなかったそうです。
+    5日以上前にお子様が車内でオウトされたと
+  noindex: false
+ogp:
+  og_image: line_oa_chat_260323_145111.jpg
+  og_type: article
 ---
 
 世田谷の閑静な住宅街。  
