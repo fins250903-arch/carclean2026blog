@@ -6,6 +6,11 @@ categories:
   - jisseki
   - saitama
 coverImage: s__18309127.jpg
+seo:
+  noindex: false
+  meta_description: 新しいドライバーさんに気持ちよく運転してもらうため、洗浄を依頼したいと連絡がありました
+ogp:
+  og_type: article
 ---
 # 
 4トントラックのキャビン洗浄
