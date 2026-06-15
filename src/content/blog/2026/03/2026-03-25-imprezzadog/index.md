@@ -1,10 +1,18 @@
 ---
-title: "【市川市】スバル・インプレッサのペットの毛とニオイ除去"
 date: 2026-03-25
-categories: 
-  - "chiba"
-  - "tokublo"
-coverImage: "スバル・インプレッサback.jpg"
+title: 【市川市】スバル・インプレッサのペットの毛とニオイ除去
+shortSlug: imprezzadog
+categories:
+  - chiba
+  - jisseki
+coverImage: スバル・インプレッサback.jpg
+seo:
+  meta_description: |-
+    お客様の方でもコロコロの粘着剤で取ったり、市販のハンディ掃除機で吸い取ったりしたけど、
+    あまり取れない。そこで当店へご相談がありました。
+  noindex: false
+ogp:
+  og_type: article
 ---
 
 江戸川を越えた先での作業。愛犬とのお出かけで、シート全体に毛が刺さり、  
