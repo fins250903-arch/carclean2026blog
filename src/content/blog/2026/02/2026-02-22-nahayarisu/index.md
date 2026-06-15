@@ -10,6 +10,7 @@ seo:
   noindex: false
   meta_title: 【那覇市】トヨタ ヤリスのガンコなエアコン・カビ臭を撃退！車内クリーニング・消臭施工
   meta_description: 沖縄特有の高温多湿な気候により、年間を通してエアコンの使用頻度が高い那覇市エリア。冷房の使いすぎでエバポレーターに結露が発生し、車内に染み付いてしまったツンとするカビ臭のご相談
+  keywords: 【那覇市】消臭施工
 ogp:
   og_image: 2.jpg
   og_type: article
