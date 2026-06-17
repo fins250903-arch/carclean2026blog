@@ -1,10 +1,17 @@
 ---
-title: "[大阪市] 小型ミニバンのシエンタ 嘔吐 消臭"
 date: 2026-02-17
-categories: 
-  - "jisseki"
-  - "oosaka"
-coverImage: "シエンタ-家族旅行1-e1771336762154.jpg"
+title: "[大阪市] 小型ミニバンのシエンタ 嘔吐 消臭"
+shortSlug: osakaminvansyousyu
+categories:
+  - jisseki
+  - osaka
+coverImage: line_oa_chat_260323_145111.jpg
+seo:
+  meta_description: 阪神高速の渋滞中、お子様が突然の嘔吐に見舞われ、車内はパニックに近い状態になってしまいました
+  noindex: false
+ogp:
+  og_image: line_oa_chat_260323_145111.jpg
+  og_type: article
 ---
 
 此花区のテーマパークで一日中遊び、興奮冷めやらぬまま帰路につく夜。 阪神高速の渋滞中、お子様が突然の嘔吐に見舞われ、車内はパニックに近い状態になってしまいました。 楽しかった一日の終わりが、このような形で終わってしまうのはあまりにも悲しいものです。
