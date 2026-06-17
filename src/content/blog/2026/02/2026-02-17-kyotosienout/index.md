@@ -1,10 +1,17 @@
 ---
-title: "[京都市] 家族の愛車シエンタ 嘔吐 消臭"
 date: 2026-02-17
-categories: 
-  - "kyouto"
-  - "jisseki"
-coverImage: "1759578725524-e1771336426437.jpg"
+title: "[京都市] 家族の愛車シエンタ 嘔吐 消臭"
+shortSlug: kyotosienout
+categories:
+  - jisseki
+  - kyoto
+coverImage: sienta2retume-after.jpg
+seo:
+  meta_description: " 嘔吐物は時間が経つと凝固し、繊維に強く癒着します"
+  noindex: false
+ogp:
+  og_image: sienta2retume-after.jpg
+  og_type: article
 ---
 
 嵐山の紅葉を愛でた帰り、静かな夕闇に包まれる京都市内の路地。 後部座席で起きた小さなアクシデントが、静謐な車内の空気を一変させてしまいました。 古都の美しさに浸っていた心が、一瞬で現実に引き戻されるような感覚だったことでしょう。
