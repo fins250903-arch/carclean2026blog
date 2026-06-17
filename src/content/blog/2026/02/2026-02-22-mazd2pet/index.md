@@ -1,5 +1,5 @@
 ---
-date: 2026-02-22
+date: 2026-06-17
 title: 【京都市】マツダ MAZDA2のペット（犬）の粗相トラブル解決！
 shortSlug: mazd2pet
 categories:
