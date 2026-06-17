@@ -1,5 +1,5 @@
 ---
-date: 2026-02-22
+date: 2026-06-17
 title: 【堺市】日産 ノートの辛い悩み…子供の車酔い（嘔吐）を徹底洗浄！消臭施工の事例
 shortSlug: sakaiouto
 categories:
