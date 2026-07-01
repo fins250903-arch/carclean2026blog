@@ -1,16 +1,17 @@
 ---
-date: 2026-02-22
+date: 2026-07-01
 title: 【名古屋市】スズキ スイフトの中古車特有のタバコ臭を完全消臭！
 shortSlug: nagoyatabacco
 categories:
   - jisseki
   - aichi
-coverImage: スズキ-スイフト2.jpg
+coverImage: usiro2.webp
 seo:
   meta_description: ネットで購入した中古車の状態は良かったものの、どうしても染み付いたタバコのヤニ臭が我慢できない
-  noindex: true
+  noindex: false
 ogp:
   og_type: article
+  og_image: usiro2.webp
 ---
 
 完全な車社会であり、日々の通勤からお買い物までマイカーが手放せない名古屋市エリア。ネットで購入した中古車の状態は良かったものの、どうしても染み付いたタバコのヤニ臭が我慢できないとのことでご依頼いただきました。
