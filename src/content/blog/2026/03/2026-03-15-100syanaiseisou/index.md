@@ -1,10 +1,16 @@
 ---
-title: "身近な100均5品で愛車を復活！1週間後の嘔吐臭も消せるかも！"
-date: 2026-03-15
-categories: 
-  - "tokublo"
-  - "seisou"
-coverImage: "シエンタ-家族旅行1-e1771336762154.jpg"
+date: 2026-07-01
+title: 身近な100均5品で愛車を復活！1週間後の嘔吐臭も消せるかも！
+shortSlug: 100syanaiseisou
+categories:
+  - miyagi
+coverImage: line_oa_chat_260323_145914.jpg
+seo:
+  meta_description: ダイソーやセリアで揃う550円のセットで、この戦いには勝てます
+  noindex: false
+ogp:
+  og_image: line_oa_chat_260323_145914.jpg
+  og_type: article
 ---
 
 あの日の惨劇から1週間。
