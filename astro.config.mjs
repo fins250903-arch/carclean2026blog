@@ -10,6 +10,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://carinteriorcleaning.jp',
 	output: 'static',
+	// Keep Astro 6 HTML whitespace so inline text does not collapse after the v7 default.
+	compressHTML: true,
 	integrations: [react(), markdoc(), mdx(), sitemap()],
 
 	fonts: [
